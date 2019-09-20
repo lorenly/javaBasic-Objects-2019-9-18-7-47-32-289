@@ -133,7 +133,8 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        BaseClassWithName base = derived;
+        final String expected = base.getName();
         // --end-->
 
         assertEquals(expected, derived.getName());

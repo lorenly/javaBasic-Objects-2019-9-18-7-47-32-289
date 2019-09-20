@@ -36,7 +36,7 @@ public class PersonForEquals {
     public boolean equals(Object obj) {
         // TODO: please modify the following code to pass the test
         // <--start
-        throw new NotImplementedException();
+        return yearOfBirth == this.yearOfBirth && name.equals(this.name);
         // --end-->
     }
 

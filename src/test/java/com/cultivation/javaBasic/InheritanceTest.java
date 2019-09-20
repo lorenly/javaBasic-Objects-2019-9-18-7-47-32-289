@@ -14,8 +14,7 @@ class InheritanceTest {
     void should_be_derived_from_object_class() {
         // TODO: please modify the following code to pass the test
         // <--start
-        SimpleEmptyClass sec = new SimpleEmptyClass();
-        final Class<?> expectedSuperClass = sec.getClass().getSuperclass();
+        final Class<?> expectedSuperClass = Object.class;
         // --end-->
 
         assertEquals(expectedSuperClass, SimpleEmptyClass.class.getSuperclass());
@@ -27,9 +26,9 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        SuperClassWithDefaultConstructor s = new SuperClassWithDefaultConstructor();
+        SuperClassWithDefaultConstructor s = new DerivedFromSuperClassWithDefaultConstructor();
 
-        final String[] expected = {s.getLogs()[0],instance.getLogs()[1]};
+        final String[] expected = {s.getLogs()[0],s.getLogs()[1]};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -43,8 +42,8 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        SuperClassWithDefaultConstructor s = new SuperClassWithDefaultConstructor();
-        final String[] expected = {s.getLogs()[0],instance.getLogs()[1],instance.getLogs()[2]};
+        SuperClassWithDefaultConstructor s = new DerivedFromSuperClassWithDefaultConstructor(42);
+        final String[] expected = {s.getLogs()[0],s.getLogs()[1],s.getLogs()[2]};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -58,8 +57,8 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        SuperClassWithDefaultConstructor s = new SuperClassWithDefaultConstructor("God");
-        final String[] expected = {s.getLogs()[0], instance.getLogs()[1]};
+        SuperClassWithDefaultConstructor s = new DerivedFromSuperClassWithDefaultConstructor("God");
+        final String[] expected = {s.getLogs()[0], s.getLogs()[1]};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -106,10 +105,9 @@ class InheritanceTest {
         } catch (Exception error) {
             willThrow = true;
         }
-
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final Optional<Boolean> expected = Optional.of(true);
         // --end-->
 
         assertEquals(expected.get(), willThrow);
@@ -123,7 +121,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = nested.getName();
         // --end-->
 
         assertEquals(expected, derived.getName());

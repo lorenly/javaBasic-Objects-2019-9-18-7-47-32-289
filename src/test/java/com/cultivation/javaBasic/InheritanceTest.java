@@ -73,7 +73,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        BaseClassForOverriding b = new DerivedFromBaseClassForOverriding();
+        DerivedFromBaseClassForOverriding b = new DerivedFromBaseClassForOverriding();
         final String expectedName = b.getName();
         // --end-->
 
@@ -86,6 +86,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
+
         final String expectedName = null;
         // --end-->
 

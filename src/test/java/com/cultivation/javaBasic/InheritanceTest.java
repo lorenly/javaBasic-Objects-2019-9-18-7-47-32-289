@@ -14,7 +14,8 @@ class InheritanceTest {
     void should_be_derived_from_object_class() {
         // TODO: please modify the following code to pass the test
         // <--start
-        final Class<?> expectedSuperClass = null;
+        SimpleEmptyClass sec = new SimpleEmptyClass();
+        final Class<?> expectedSuperClass = sec.getClass().getSuperclass();
         // --end-->
 
         assertEquals(expectedSuperClass, SimpleEmptyClass.class.getSuperclass());

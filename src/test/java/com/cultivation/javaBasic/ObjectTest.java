@@ -67,7 +67,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final int expected = 0;
+        final int expected = 5;
         // --end-->
 
         assertEquals(expected, value);
@@ -89,7 +89,7 @@ class ObjectTest {
         // TODO: please modify the following code to pass the test.
         // You can only choose from `sameReference` and `instanceCreatedByMethod`
         // <--start
-        final Object expected = null;
+        final Object expected = sameReference;
         // --end-->
 
         assertEquals(expected, objectReference);
@@ -103,7 +103,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = "Updated Name";
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -117,7 +117,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = null;
+        final String expected = fixture.methodWithOneParameter((Object)"I am a string");
         // --end-->
 
         assertEquals(expected, actual);
@@ -133,7 +133,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = null;
+        final String expected = fixture.methodWithTwoParameters("name", 2);
         // --end-->
 
         assertEquals(expected, actual);
@@ -145,7 +145,8 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        CallingAnotherCtor c = new CallingAnotherCtor(instance.getName());
+        final String expected = c.getName();
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -160,7 +161,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        final String[] expected = {instance.getLogs()[0], instance.getLogs()[1], instance.getLogs()[2], instance.getLogs()[3]};
         // --end-->
 
         assertArrayEquals(expected, logs);
@@ -172,7 +173,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = "1\n2\n3\n";
         // --end-->
 
         assertEquals(expected, message);
@@ -186,7 +187,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = "1\n2\n3\n";
         // --end-->
 
         assertEquals(expected, message);

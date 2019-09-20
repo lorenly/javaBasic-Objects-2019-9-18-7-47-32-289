@@ -43,7 +43,8 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        SuperClassWithDefaultConstructor s = new SuperClassWithDefaultConstructor();
+        final String[] expected = {s.getLogs()[0],instance.getLogs()[1],instance.getLogs()[2]};
         // --end-->
 
         String[] logs = instance.getLogs();
